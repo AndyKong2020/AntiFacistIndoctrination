@@ -17,7 +17,13 @@
 ## 📦 单机使用方法
 
 ```bash
-cargo run -r -- -c <YOUR_COOKIE_HERE> [-s <YOUR_TOKEN_HERE>]
+cargo run -r -- [-s <YOUR_TOKEN_HERE>] <YOUR_COOKIE_HERE>
+```
+
+其中 Cookie 可以是批量的，以空格分隔。例如：
+
+```bash
+cargo run -r -- -s SCU1234567890abcdef laravel_session=23333333333 laravel_session=114514
 ```
 
 ## 🏭 全自动完成
@@ -26,14 +32,18 @@ cargo run -r -- -c <YOUR_COOKIE_HERE> [-s <YOUR_TOKEN_HERE>]
 
 首先，Fork 这个 Repo。然后为这个 Repo 设置一个名为 AFI_COOKIE 的 Secrets，里面填入你的 Cookie，像这样：`laravel_session=2333333333333333333333333333333333333333`
 
+或者如果你想批量完成，那就这样：`laravel_session=23333333333 laravel_session=114514`
+
 设置完之后，在 Repo 页面点击 Actions，按照里面的提示启用 Actions，否则 Action 不会运行。
 
 这以后，这个 Action 在每周一 18 时会运行，帮你完成任务。值得注意的是，你需要每 60 天手动开启一下这个 Action，不然会被 GitHub 暂停。
 
 ## 🍪 如何获取 Cookie
 
-见[此处](https://yuzaii.github.io/archives/c59a0c1a.html)（备份见[此处](https://web.archive.org/web/20230306140515/https://yuzaii.github.io/archives/c59a0c1a.html)），获得 `laravel_session=*` 后即可填入 Secrets。
+见[此处](https://web.archive.org/web/20230306140515/https://yuzaii.github.io/archives/c59a0c1a.html)，获得 `laravel_session=*` 后即可填入 Secrets。
 
 ## 📱 Server 酱消息推送
 
 [注册 Server 酱](https://sct.ftqq.com/)并获取 `SendKey` ，然后为你 Fork 下的 Repo 设置一个名为 `AFI_TOKEN` 的 Secrets，里面填入 `SendKey`。这以后，本项目在运行后会使用 Server 酱向你推送结果。
+
+![Stargazers over time](https://starchart.cc/BeiyanYunyi/AntifacistIndoctrination.svg)]
